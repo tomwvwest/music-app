@@ -6,7 +6,7 @@ export const Header = () => {
   const { user, setUser } = useUserContext();
 
   return (
-    <section className="border-b bg-blue h-18 fixed w-screen flex justify-between items-center text-white px-10">
+    <section className=" bg-blue h-18 border-b-[1px] border-black fixed w-screen flex justify-between items-center text-white px-10 z-[100]">
       <Link href="/">
         <img src="Logo.png" className="h-16"></img>
       </Link>
