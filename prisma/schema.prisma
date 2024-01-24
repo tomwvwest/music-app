@@ -14,7 +14,7 @@ model Users {
   user_id Int @id @default(autoincrement())
   username String @unique
   image_url String? @default("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png")
-  library String? @default("[]")
+  library String[]
   playlists Playlists[]
 }
 
@@ -23,5 +23,5 @@ model Playlists {
   playlist_name String
   creator_id Int
   creator Users @relation(fields: [creator_id], references: [user_id])
-  contents String? @default("[]")
+  contents String[]
 }
