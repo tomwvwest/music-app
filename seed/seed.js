@@ -11,7 +11,7 @@ async function seedDatabase(){
     await prisma.users.createMany({data: users});
     await prisma.playlists.createMany({data: playlists})
 
-    console.log('Data inserted')
+    // console.log('Data inserted')
   } catch(error){
     console.error('Error inserting data: ', error)
   } finally {
